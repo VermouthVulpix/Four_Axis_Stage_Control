@@ -15,12 +15,12 @@
   4. Controller for rotary stage
   5. Arduino Nano
 
-- Communicate to Gantry
+- Communicate to Gantry\
   GRBL library can make it easily to communicate with the controller when the COM port is well connected.
   To enhance the revolution and accuracy, the command must be able to specify the exact coordinate of the destination and the speed.
   Besides, in order to record the location, cartesian coordinates for x,y,z, it's necessary to receive information from controllers.
 
-- Communicate to Rotary
+- Communicate to Rotary\
   - The rotary is equipped with Nema 17 stepper controller, from which there are four signals coming out, A+, A-, B+, B-.
   - A+, A- stands for one of two loops for the two phases motor and can be easily found by connecting any two wires together. If the motor can be rotated by hand, there's short circuit and could be either A+, A- pair or B+, B-. In most of the cases, the cables would be labeled. The four wires are then connected to a controller, which contains pins corresponding to A+, A-, B+, B-. That is, what the controller do is to energize the motor and convert the command to feed to the motor.
   - What we exactly do to actuate the motor is by communicating with the controller by send signals for pulses and directions. This is the reason that Arduino Nano is used here. We make use of the GPIO pin to generate nearly 5V to imply HIGH/LOW or CW/CCW.
