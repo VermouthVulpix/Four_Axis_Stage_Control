@@ -15,7 +15,7 @@
   4. Controller for rotary stage
   5. Arduino Nano
 
-- Communicate to Gantry\
+- Communicate to Gantry
   GRBL library can make it easily to communicate with the controller when the COM port is well connected.
   To enhance the revolution and accuracy, the command must be able to specify the exact coordinate of the destination and the speed.
   Besides, in order to record the location, cartesian coordinates for x,y,z, it's necessary to receive information from controllers.
